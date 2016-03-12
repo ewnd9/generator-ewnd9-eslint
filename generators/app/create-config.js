@@ -17,7 +17,8 @@ module.exports = function() {
 };
 
 module.exports.react = function() {
-  var config = module.exports.default();
+  var config = module.exports();
+
   config.plugins = config.plugins.concat("react");
   config.rules = Object.assign(config.rules, {
     "react/jsx-uses-vars": 2,

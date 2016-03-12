@@ -44,12 +44,14 @@ module.exports = yeoman.generators.Base.extend({
       };
 
       assign('scripts', {
-        'style': 'eslint src/*'
+        'lint': 'eslint src/*',
+        'prepush': 'npm run lint && npm test'
       });
 
       assign('devDependencies', {
         'eslint': '^1.10.3',
-        'babel-eslint': '^5.0.0-beta9'
+        'babel-eslint': '^5.0.0-beta9',
+        'husky': '^0.11.3'
       });
 
       if (!isReact) {
