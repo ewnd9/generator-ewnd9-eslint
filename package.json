@@ -2,7 +2,9 @@
   "name": "generator-ewnd9-eslint",
   "version": "0.0.0",
   "description": "My eslint config generator",
-  "homepage": "",
+  "scripts": {
+    "test": "mocha"
+  },
   "author": {
     "name": "ewnd9",
     "email": "ewndnine@gmail.com",
@@ -18,5 +20,8 @@
   "dependencies": {
     "yeoman-generator": "^0.19.0",
     "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }

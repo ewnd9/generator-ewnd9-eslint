@@ -13,7 +13,7 @@ describe('generator-ewnd9-eslint:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      '.eslintrc.json'
     ]);
   });
 });
