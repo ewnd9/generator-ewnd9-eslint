@@ -3,6 +3,7 @@
 const yeoman = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const sortedObject = require('sorted-object');
 
 const TYPE_DEFAULT = 'Default';
 const TYPE_REACT = 'React';
@@ -35,12 +36,13 @@ module.exports = yeoman.generators.Base.extend({
       const dest = this.destinationPath(path);
       const data = this.fs.readJSON(dest) || {};
       cb(data);
+
       this.fs.writeJSON(path, data);
     };
 
     override('package.json', data => {
       const assign = (property, values) => {
-        data[property] = Object.assign(data[property] || {}, values);
+        data[property] = sortedObject(Object.assign(data[property] || {}, values));
       };
 
       assign('scripts', {

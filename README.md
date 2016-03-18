@@ -9,6 +9,8 @@ $ git clone https://github.com/ewnd9/generator-ewnd9-eslint
 $ npm link
 ```
 
+Intended to be used as a part of [generator-ewnd9-npm](https://github.com/ewnd9/generator-ewnd9-npm)
+
 ## Usage
 
 ```
