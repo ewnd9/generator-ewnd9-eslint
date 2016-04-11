@@ -9,9 +9,12 @@ module.exports = function() {
     },
     "plugins": [],
     "rules": {
+      "arrow-parens": [2, "as-needed"],
+      "no-extra-semi": 2,
       "no-undef": 2,
       "no-unused-vars": 2,
-      "no-var": 2
+      "no-var": 2,
+      "semi": [2, "always"]
     }
   };
 };
