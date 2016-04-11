@@ -3,6 +3,9 @@
 module.exports = function() {
   return {
     "parser": "babel-eslint",
+    "globals": {
+      "Promise": true
+    },
     "env": {
       "browser": true,
       "node": true
