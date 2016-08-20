@@ -1,8 +1,6 @@
 'use strict';
 
 const yeoman = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
 const sortedObject = require('sorted-object');
 
 const TYPE_DEFAULT = 'Default';

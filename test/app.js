@@ -1,7 +1,7 @@
 'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-generator').test;
+let path = require('path');
+let assert = require('yeoman-assert');
+let helpers = require('yeoman-generator').test;
 
 describe('generator-ewnd9-eslint:app', function () {
   before(function (done) {
