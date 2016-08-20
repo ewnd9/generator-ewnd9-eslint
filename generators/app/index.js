@@ -27,8 +27,8 @@ module.exports = yeoman.generators.Base.extend({
   },
   writing: function() {
     const creator = require('./create-config');
-    const isReact = this.props.type === TYPE_DEFAULT;
-    const config = isReact ? creator() : creator.react();
+    const isDefault = this.props.type === TYPE_DEFAULT;
+    const config = isDefault ? creator() : creator.react();
 
     this.fs.writeJSON(this.destinationPath('.eslintrc.json'), config);
 
@@ -56,7 +56,7 @@ module.exports = yeoman.generators.Base.extend({
         'husky': '^0.11.6'
       });
 
-      if (!isReact) {
+      if (this.props.type === TYPE_REACT) {
         assign('devDependencies', {
           'eslint-plugin-react': '^6.1.0'
         });
