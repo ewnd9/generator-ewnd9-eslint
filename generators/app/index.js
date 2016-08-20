@@ -46,19 +46,19 @@ module.exports = yeoman.generators.Base.extend({
       };
 
       assign('scripts', {
-        'lint': 'eslint src/**/*.js',
-        'prepush': 'npm run lint && npm test'
+        'lint': "eslint 'src/**/*.js'",
+        'precommit': 'npm run lint && npm test'
       });
 
       assign('devDependencies', {
-        'eslint': '^2.7.0',
+        'eslint': '^3.0.0',
         'babel-eslint': '^6.0.0',
-        'husky': '^0.11.3'
+        'husky': '^0.11.6'
       });
 
       if (!isReact) {
         assign('devDependencies', {
-          'eslint-plugin-react': '^4.3.0'
+          'eslint-plugin-react': '^6.1.0'
         });
       }
     });

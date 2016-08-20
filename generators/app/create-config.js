@@ -13,6 +13,7 @@ module.exports = function() {
     "plugins": [],
     "rules": {
       "arrow-parens": [2, "as-needed"],
+      "keyword-spacing": 2,
       "no-extra-semi": 2,
       "no-undef": 2,
       "no-unused-vars": 2,
@@ -27,6 +28,7 @@ module.exports.react = function() {
 
   config.plugins = config.plugins.concat("react");
   config.rules = Object.assign(config.rules, {
+    "react/jsx-no-undef": 2,
     "react/jsx-uses-vars": 2,
     "react/jsx-uses-react": 2
   });
